@@ -12,13 +12,13 @@
  }   
  void draw()   
  {    
- 	//move and show the bacteria 
+ 	
  	for(int m = 0; m < greenColony.length; m++)
  	{
  		greenColony[m].walk();
  		greenColony[m].show();
  	}  
- }  
+ }
  class Bacteria    
  {     
  	//lots of java!
@@ -27,18 +27,16 @@
  	{
  		myX = 250;
  		myY = 250;
- 		myColor = (int)(Math.random()*256);
- 		
- 		
+ 		myColor = (int)(Math.random()*256);		
  	}
  	void walk()
  	{
- 		myX = myX + (int)(Math.random()*4)-2;
- 		myY = myY + (int)(Math.random()*4)-3;
+ 		myX = myX + (int)(Math.random()*11)-5;
+ 		myY = myY + (int)(Math.random()*23)-11;
  	}
  	void show()
  	{
- 		fill(myColor,myColor,myColor);
- 		ellipse(myX,myY,2,2);
+ 		fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
+ 		ellipse(myX,myY,10,10);
  	}   
  }    
